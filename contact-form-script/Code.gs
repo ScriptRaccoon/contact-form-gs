@@ -1,3 +1,6 @@
+// insert your mail address here
+const mymail = "javascript.martin@gmail.com";
+
 function doGet() {
     const output = HtmlService.createTemplateFromFile("index.html").evaluate();
     output.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
@@ -23,7 +26,7 @@ function sendMessage(text, mail) {
         "E-mail: " +
         mail;
     try {
-        GmailApp.sendEmail("javascript.martin@gmail.com", "Contact form submission", body);
+        GmailApp.sendEmail(mymail, "Contact form submission", body);
     } catch (e) {
         throw new Error("The message could not be sent.");
     }
