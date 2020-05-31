@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Contact Form</title>
+        <?!= include("style"); ?>
+    </head>
+
+    <body>
+        <header>
+            <h1>Contact Form</h1>
+        </header>
+        <section id="form">
+            <p>Leave us a message</p>
+            <textarea id="text" placeholder="Your message..."></textarea>
+            <input type="text" placeholder="Your e-mail..." id="mail" />
+            <input type="button" id="btn" value="Submit" />
+            <div id="info"></div>
+        </section>
+        <?!= include("script"); ?>
+    </body>
+</html>

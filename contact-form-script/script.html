@@ -1,0 +1,18 @@
+<script>
+    const text = document.getElementById("text");
+    const mail = document.getElementById("mail");
+    const btn = document.getElementById("btn");
+    const info = document.getElementById("info");
+    btn.addEventListener("click", () => {
+        google.script.run
+            .withSuccessHandler(success)
+            .withFailureHandler(failure)
+            .sendMessage(text.value, mail.value);
+    });
+    function success() {
+        info.innerText = "Thank you! Your message has been sent.";
+    }
+    function failure(e) {
+        info.innerText = e.message;
+    }
+</script>
