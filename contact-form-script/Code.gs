@@ -1,5 +1,5 @@
 // insert your mail address here
-const mymail = "javascript.martin@gmail.com";
+const mymail = "...EMAIL...";
 
 function doGet() {
     const output = HtmlService.createTemplateFromFile("index.html").evaluate();
