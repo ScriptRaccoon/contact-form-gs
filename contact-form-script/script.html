@@ -1,13 +1,14 @@
 <script>
-    const text = document.getElementById("text");
+    const name = document.getElementById("name");
     const mail = document.getElementById("mail");
+    const message = document.getElementById("message");
     const btn = document.getElementById("btn");
     const info = document.getElementById("info");
     btn.addEventListener("click", () => {
         google.script.run
             .withSuccessHandler(success)
             .withFailureHandler(failure)
-            .sendMessage(text.value, mail.value);
+            .sendMessage(name.value, mail.value, message.value);
     });
     function success() {
         info.innerText = "Thank you! Your message has been sent.";
